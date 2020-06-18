@@ -1,2 +1,1 @@
 # NbaTeamsInfo
-# NbaTeamsInfo
