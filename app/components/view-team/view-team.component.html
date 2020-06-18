@@ -1,0 +1,30 @@
+<div class="container mb-5">
+    <p class="font-weight-light">Team: {{team.full_name}}</p>
+
+  <img class="float-right" style="margin-right: 150px" height="180px" width="180px" src="./assets/imagesAbv/{{team.abbreviation}}.png" alt="">
+
+      <div class="mb-5 ml-5">
+        <p class="card-header col-md-3">
+          <i>City:</i><span class="float-right text-uppercase font-weight-bold">{{team.city}}</span>
+        </p>
+
+        <p class="card-header col-md-3">
+          <i>Conference:</i><span class="float-right text-uppercase font-weight-bold">{{team.conference}}</span>
+        </p>
+
+        <p class="card-header col-md-3">
+          <i>Division:</i><span class="float-right text-uppercase font-weight-bold">{{team.division}}</span>
+        </p>
+
+        <p class="card-header col-md-3">
+          <i>Shortcut:</i><span class="float-right text-uppercase font-weight-bold">{{team.abbreviation}}</span>
+        </p>
+      </div>
+
+      <p class="h3" style="font-family: Verdana">Players:</p>
+      <span *ngFor="let player of players">
+        <span *ngIf="team.full_name === player.team_name">
+          <i style="display: inline-flex" class="card card-body col-md-3">{{player.name}}</i>
+        </span>
+      </span>
+  </div>

@@ -1,0 +1,12 @@
+<div *ngFor="let photo of photoList" class="view view-tenth border border-secondary">
+    <img src="./assets/images/{{photo.src}}" height="180px" width="200px" alt="">
+    <div *ngFor="let team of teams">
+      <div *ngIf= "photo.id=== team.id">
+        <div class="mask">
+          <h2>{{team.abbreviation}}</h2>
+          <p>{{team.full_name}}</p>
+          <a routerLink="/team/{{ team.id }}" class="info">View this team</a>
+        </div>
+      </div>
+    </div>
+</div>
